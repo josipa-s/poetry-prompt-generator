@@ -1,10 +1,32 @@
-.App {
-  text-align: center;
+@import "@picocss/pico";
+
+.btn-custom {
+  --pico-primary-background: #e63946;
+  --pico-primary-hover-background: #c1121f;
+  background-color: var(--pico-primary-background);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App {
+  text-align: center;
+  --pico-font-family: Times New Roman, Times, Serif;
+  align-self: auto;
+  padding: 5% 25% 5% 25%;
+}
+
+@media screen and (max-width: 900px) {
+  .App {
+    padding: 5% 15% 5% 15%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .App {
+    padding: 5% 5% 5% 5%;
+  }
+}
+
+main {
+  gap: 2rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,26 +35,48 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 {
+    --pico-font-family: Brush Script MT;
+    font-size: 2.5rem;
+  }
+
+form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  /*background-color: blueviolet;*/
+  border-radius: 3rem !important;
+  width: fit-content !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+select {
+  width: fit-content;
+}
+
+.prompt {
+  padding: 5%;
+}
+
+.textContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: auto;
+}
+
+.feather {
+  width: 5rem;
+  margin: auto;
+}
+
+#rightFeather {
+  transform: scaleX(-1);
+}
+
+h4 {
+  padding: 1rem;
 }

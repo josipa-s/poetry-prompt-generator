@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import { Form } from './form';
+import { useState } from 'react';
 
 function App() {
+  const [prompt, setPrompt] = useState("")
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className='App'>
+      <header>
+        <h1>Poetry Prompt Generator</h1>
       </header>
+      <main>
+        <div className='textContainer'>
+          <img src='feather.png' className='feather' alt='feather icon'/>
+          <h4>Not sure what to write about? Generate a prompt and start writing. Don’t like it? Generate another one!</h4>
+          <img src='feather.png' className='feather' id='rightFeather' alt='mirrored feather icon'/>
+        </div>
+       <Form setPrompt={setPrompt}/>
+      </main>
+      <h3 className='prompt'>{prompt}</h3>
     </div>
   );
 }
