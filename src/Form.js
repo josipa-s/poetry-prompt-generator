@@ -1,5 +1,3 @@
-
-
 async function generatePrompt(theme) {
   try {
     const themeMap = {
